@@ -24,7 +24,7 @@
   <body>
     <!-- navbar -->
     <section
-      class="flex flex-col md:flex-row justify-between items-center max-w-full mx-auto p-5"
+      class="flex flex-col md:flex-row justify-between items-center max-w-full mx-auto p-7"
     >
       <div class="flex items-center">
         <img class="w-[80px]" src="assets/logo.png" alt="" />
@@ -36,7 +36,7 @@
 
       <div class="flex gap-3 mt-7 md:mt-0">
         <div class="flex items-center gap-3 bg-green-100 py-2 px-7 rounded-3xl">
-          <p class="text-2xl text-black font-bold"><span>0</span></p>
+          <p class="text-2xl text-black font-bold"><span id="heart-value">0</span></p>
           <img class="w-[30px]" src="assets/heart.png" alt="" />
         </div>
         <div class="flex items-center gap-3 bg-green-100 py-2 px-7 rounded-3xl">
@@ -73,7 +73,7 @@
               src="assets/emergency.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="1heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">National Emergency Number</h2>
           <p class="text-gray-500">National Emergency</p>
@@ -104,7 +104,7 @@
               src="assets/police.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="2heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Police Helpline Number</h2>
           <p class="text-gray-500">Police</p>
@@ -135,7 +135,7 @@
               src="assets/fire-service.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="3heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Fire Service Number</h2>
           <p class="text-gray-500">Fire Service</p>
@@ -166,7 +166,7 @@
               src="assets/ambulance.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="4heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Ambulance Service</h2>
           <p class="text-gray-500">Ambulance</p>
@@ -197,7 +197,7 @@
               src="assets/emergency.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="5heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Women & Child Helpline</h2>
           <p class="text-gray-500">Women & Child Helpline</p>
@@ -228,7 +228,7 @@
               src="assets/emergency.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="6heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Anti-Corruption Helpline</h2>
           <p class="text-gray-500">Anti-Corruption</p>
@@ -259,7 +259,7 @@
               src="assets/emergency.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="7heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Electricity Helpline</h2>
           <p class="text-gray-500">Electricity Outage</p>
@@ -290,7 +290,7 @@
               src="assets/brac.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="8heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Brac Helpline</h2>
           <p class="text-gray-500">Brac</p>
@@ -321,7 +321,7 @@
               src="assets/Bangladesh-Railway.png"
               alt=""
             />
-            <span><i class="fa-regular fa-heart text-xl"></i></span>
+            <span id="9heart-btn"><i class="fa-regular fa-heart text-xl"></i></span>
           </div>
           <h2 class="text-xl font-bold">Bangladesh Railway Helpline </h2>
           <p class="text-gray-500">Bangladesh Railway</p>
@@ -348,7 +348,17 @@
         
         
       </div>
-      <div class="border-2 border-green-500 md:w-1/4"></div>
+      <div class=" bg-white md:w-1/4 p-5 bg-white rounded-2xl shadow-xl mt-6 md:mt-0">
+        <div class="flex justify-between items-center">
+            <h1 class="text-xl font-semibold"><i class="fa-regular fa-clock"></i> Call History
+            
+        </h1>
+        <button class="bg-green-500 py-2 px-7 rounded-3xl text-white text-xl font-semibold"> Clear</button>
+        </div>
+        
+      </div>
     </section>
+
+    <script src="java.js"></script>
   </body>
 </html>
