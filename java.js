@@ -39,15 +39,35 @@ document.querySelectorAll(".call-btn").forEach((button) => {
     const card = this.closest(".card");
     const name = card.querySelector(".service-name").innerText;
     const number = card.querySelector(".number").innerText;
+    const helpLine = card.querySelector(".help-line").innerText;
     let coinValue = parseInt(document.getElementById("coin-value").innerText);
-    console.log(coinValue);
+    const callHistory = document.getElementById("call-history");
+    const date = new Date().toLocaleTimeString();
+
+    // console.log(helpLine);
     if (coinValue >= 20) {
       document.getElementById("coin-value").innerText = coinValue - 20;
       alert(`📞 Calling ${name} ${number}`);
+      const historyItems = document.createElement("div");
+      historyItems.id = "call-history";
+      historyItems.innerHTML = `
+      <div class="flex justify-between items-center bg-[#FAFAFA] rounded-xl p-5 my-5"> 
+            <div class="">
+                <h1 class="font-bold text-xl">${helpLine}</h1>
+            <p class="font-semibold text-gray-500">${number}</p>
+        </div>
+            <div>${date}</div>
+        </div>
+
+      `;
+      callHistory.appendChild(historyItems);
+    } else {
+      alert("❌ Not Enough Coins ❌");
     }
-    else{
-        alert("❌ Not Enough Coins ❌")
-    }
-    
+    document.getElementById("clear-btn").addEventListener("click", function () {
+      if (callHistory.children.length > 1) {
+        callHistory.removeChild(callHistory.lastChild);
+      }
+    });
   });
 });
