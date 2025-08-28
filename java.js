@@ -33,6 +33,17 @@ document.getElementById("8heart-btn").addEventListener("click", function () {
 document.getElementById("9heart-btn").addEventListener("click", function () {
   heartButton("9heart-btn");
 });
+document.querySelectorAll(".copy-btn").forEach((button) => {
+  button.addEventListener("click", function () {
+    const card = this.closest(".card");
+    const number = card.querySelector(".number").innerText;
+    navigator.clipboard.writeText(number);
+    alert(`Number Copied: ${number}`);
+    const copyValue = parseInt(document.getElementById("copy-value").innerText);
+    // console.log(copyValue)
+    document.getElementById("copy-value").innerText = copyValue + 1;
+  });
+});
 
 document.querySelectorAll(".call-btn").forEach((button) => {
   button.addEventListener("click", function () {
